@@ -2,7 +2,7 @@
   "name": "window-search",
   "displayName": "Window Search",
   "description": "Analyze log files by searching for time windows with begin/end markers",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -27,6 +27,30 @@
           "id": "windowSearchView",
           "name": "Window Search",
           "type": "webview"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "window-search.removeMatchingLines",
+        "title": "Remove all matching lines"
+      },
+      {
+        "command": "window-search.removeNonMatchingLines",
+        "title": "Remove all but matching lines"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "window-search.removeMatchingLines",
+          "when": "editorHasSelection",
+          "group": "9_cutcopypaste"
+        },
+        {
+          "command": "window-search.removeNonMatchingLines",
+          "when": "editorHasSelection",
+          "group": "9_cutcopypaste"
         }
       ]
     }

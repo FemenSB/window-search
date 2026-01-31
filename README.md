@@ -9,6 +9,7 @@ A VS Code extension for analyzing log files by searching for time windows marked
 - **Interactive Results**: Click to navigate to lines, right-click to open pairs in new tabs
 - **Unpaired Marker Detection**: Identifies begin/end markers that couldn't be paired
 - **Sidebar Panel**: Dedicated panel in the activity bar for easy access
+- **Log Filtering**: Remove matching or non-matching lines directly from the editor via context menu
 
 ## Usage
 
@@ -24,6 +25,15 @@ A VS Code extension for analyzing log files by searching for time windows marked
 **FIFO (First-In-First-Out)**: Each end marker is paired with the oldest unpaired begin marker that appears before it. This is useful for sequential, non-overlapping operations.
 
 **LIFO (Last-In-First-Out)**: Each end marker is paired with the most recent unpaired begin marker that appears before it. This is useful for nested operations or stack-like behavior.
+
+### Log Filtering
+
+You can filter log files by selecting text and right-clicking to access context menu options:
+
+- **Remove all matching lines**: Deletes all lines containing the selected text. Useful for removing noise or specific log types.
+- **Remove all but matching lines**: Deletes all lines that don't contain the selected text. Useful for isolating specific log entries.
+
+These operations modify the current file in the editor, allowing you to quickly clean up logs for analysis.
 
 ## Example
 
@@ -70,6 +80,13 @@ This extension does not add any VS Code settings.
 None at this time.
 
 ## Release Notes
+
+### 0.1.0
+
+Added log filtering capabilities:
+- Remove all matching lines via editor context menu
+- Remove all but matching lines via editor context menu
+- Line removal operations work on selected text
 
 ### 0.0.1
 
