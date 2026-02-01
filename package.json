@@ -2,7 +2,12 @@
   "name": "window-search",
   "displayName": "Window Search",
   "description": "Analyze log files by searching for time windows with begin/end markers",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "publisher": "FelipeBorsato",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FemenSB/window-search/"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
